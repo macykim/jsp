@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+	id="WebApp_ID" version="3.1">
+	<display-name>ch04</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+	<!-- 만들어 둔 클래스를 일단 등록을 해야 한다. -->
+	<servlet>
+		<servlet-name>t</servlet-name>
+		<servlet-class>ch04.Test</servlet-class>
+	</servlet>
+	<!-- 이것을 언제 작동시킬 것인지.. 매핑 -->
+	<servlet-mapping>
+		<servlet-name>t</servlet-name>
+		<url-pattern>/test.it</url-pattern>
+	</servlet-mapping>
+	<!-- 클래스 등록 -->
+	<servlet>
+		<servlet-name>tt</servlet-name>
+		<servlet-class>ch04.Hello</servlet-class>
+	</servlet>
+	<!-- 매핑 -->
+	<servlet-mapping>
+		<servlet-name>tt</servlet-name>
+		<url-pattern>/test2.it</url-pattern>
+	</servlet-mapping>
+	<!-- 클래스 등록 -->
+	<servlet>
+		<servlet-name>day4hw</servlet-name>
+		<servlet-class>ch04.Quiz</servlet-class>
+	</servlet>
+	<!-- 매핑 -->
+	<servlet-mapping>
+		<servlet-name>day4hw</servlet-name>
+		<url-pattern>/test3.it</url-pattern>
+	</servlet-mapping>
+</web-app>
